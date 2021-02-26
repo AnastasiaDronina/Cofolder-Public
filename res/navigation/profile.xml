@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/profile"
+    app:startDestination="@id/profileFragment">
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.dronina.cofolder.ui.profile.ProfileFragment"
+        android:label="@string/menu_profile"
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/action_profile_to_friends"
+            app:destination="@id/friendsFragment"
+            app:enterAnim="@anim/enter_from_top"
+            app:exitAnim="@anim/fragment_fade_exit"
+            app:popEnterAnim="@anim/fragment_fade_enter"
+            app:popExitAnim="@anim/exit_to_top" />
+        <action
+            android:id="@+id/action_profile_to_requests"
+            app:destination="@id/requestsFragment"
+            app:enterAnim="@anim/enter_from_top"
+            app:exitAnim="@anim/fragment_fade_exit"
+            app:popEnterAnim="@anim/fragment_fade_enter"
+            app:popExitAnim="@anim/exit_to_top" />
+        <action
+            android:id="@+id/action_profile_to_settings"
+            app:destination="@id/settingsFragment"
+            app:enterAnim="@anim/enter_from_top"
+            app:exitAnim="@anim/fragment_fade_exit"
+            app:popEnterAnim="@anim/fragment_fade_enter"
+            app:popExitAnim="@anim/exit_to_top" />
+        <action
+            android:id="@+id/action_profile_to_about"
+            app:destination="@id/aboutFragment"
+            app:enterAnim="@anim/enter_from_top"
+            app:exitAnim="@anim/fragment_fade_exit"
+            app:popEnterAnim="@anim/fragment_fade_enter"
+            app:popExitAnim="@anim/exit_to_top" />
+    </fragment>
+    <fragment
+        android:id="@+id/addFriendsFragment"
+        android:name="com.dronina.cofolder.ui.addfriends.AddFriendsFragment"
+        android:label="@string/add_friends"
+        tools:layout="@layout/fragment_add_friends">
+        <action
+            android:id="@+id/action_addFriends_to_publicProfile"
+            app:destination="@id/publicProfileFragment"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/fragment_fade_exit"
+            app:popEnterAnim="@anim/fragment_fade_enter"
+            app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/publicProfileFragment"
+        android:name="com.dronina.cofolder.ui.publicprofile.PublicProfileFragment"
+        android:label="@string/public_profile"
+        tools:layout="@layout/fragment_public_profile" />
+    <fragment
+        android:id="@+id/friendsFragment"
+        android:name="com.dronina.cofolder.ui.friends.FriendsFragment"
+        android:label="@string/friends">
+        <action
+            android:id="@+id/action_friends_to_addFriends"
+            app:destination="@id/addFriendsFragment"
+            app:enterAnim="@anim/enter_from_top"
+            app:exitAnim="@anim/fragment_fade_exit"
+            app:popEnterAnim="@anim/fragment_fade_enter"
+            app:popExitAnim="@anim/exit_to_top" />
+        <action
+            android:id="@+id/action_friends_to_publicProfile"
+            app:destination="@id/publicProfileFragment"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit"
+            app:popEnterAnim="@anim/fragment_fade_enter"
+            app:popExitAnim="@anim/exit_to_right" />
+        <action
+            android:id="@+id/action_friends_to_requests"
+            app:destination="@id/requestsFragment"
+            app:enterAnim="@anim/enter_from_top"
+            app:exitAnim="@anim/fragment_fade_exit"
+            app:popEnterAnim="@anim/fragment_fade_enter"
+            app:popExitAnim="@anim/exit_to_top" />
+    </fragment>
+    <fragment
+        android:id="@+id/requestsFragment"
+        android:name="com.dronina.cofolder.ui.requests.RequestsFragment"
+        android:label="@string/requests">
+        <action
+            android:id="@+id/action_requests_to_publicProfile"
+            app:destination="@id/publicProfileFragment"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/fragment_fade_exit"
+            app:popEnterAnim="@anim/fragment_fade_enter"
+            app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.dronina.cofolder.ui.settings.SettingsFragment"
+        android:label="@string/settings">
+        <action
+            android:id="@+id/action_settings_to_changeTheme"
+            app:destination="@id/changeThemeFragment"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/fragment_fade_exit"
+            app:popEnterAnim="@anim/fragment_fade_enter"
+            app:popExitAnim="@anim/exit_to_right" />
+        <action
+            android:id="@+id/action_settings_to_language"
+            app:destination="@id/languageFragment"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/fragment_fade_exit"
+            app:popEnterAnim="@anim/fragment_fade_enter"
+            app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/changeThemeFragment"
+        android:name="com.dronina.cofolder.ui.changetheme.ChangeThemeFragment"
+        android:label="@string/theme" />
+    <fragment
+        android:id="@+id/languageFragment"
+        android:name="com.dronina.cofolder.ui.language.LanguageFragment"
+        android:label="@string/language" />
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.dronina.cofolder.ui.about.AboutFragment"
+        android:label="@string/app_info">
+        <action
+            android:id="@+id/action_about_to_feedback"
+            app:destination="@id/feedbackFragment"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/fragment_fade_exit"
+            app:popEnterAnim="@anim/fragment_fade_enter"
+            app:popExitAnim="@anim/exit_to_right" />
+        <action
+            android:id="@+id/action_about_to_privacyPolicy"
+            app:destination="@id/privacyPolicyFragment"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/fragment_fade_exit"
+            app:popEnterAnim="@anim/fragment_fade_enter"
+            app:popExitAnim="@anim/exit_to_right" />
+        <action
+            android:id="@+id/action_about_to_terms"
+            app:destination="@id/termsFragment"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/fragment_fade_exit"
+            app:popEnterAnim="@anim/fragment_fade_enter"
+            app:popExitAnim="@anim/exit_to_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/feedbackFragment"
+        android:name="com.dronina.cofolder.ui.feedback.FeedbackFragment"
+        android:label="@string/feedback" />
+    <fragment
+        android:id="@+id/privacyPolicyFragment"
+        android:name="com.dronina.cofolder.ui.privacypolicy.PrivacyPolicyFragment"
+        android:label="@string/privacy_policy"
+        tools:layout="@layout/fragment_privacy_policy" />
+    <fragment
+        android:id="@+id/termsFragment"
+        android:name="com.dronina.cofolder.ui.terms.TermsFragment"
+        android:label="@string/terms"
+        tools:layout="@layout/fragment_terms" />
+</navigation>

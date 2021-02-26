@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.dronina.cofolder.ui.register.RegisterViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.register.RegisterActivity">
+
+        <EditText
+            android:id="@+id/et_name"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/et_bg"
+            android:ems="10"
+            android:hint="@string/name"
+            android:textColorHint="?attr/colorOnSurface"
+            android:textColor="?attr/colorOnSurface"
+            android:inputType="textCapSentences|textPersonName|textNoSuggestions"
+            android:padding="16dp"
+            android:text="@={viewModel.inputName}"
+            android:textAppearance="@style/TextAppearanceNormal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/et_surname"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/et_bg"
+            android:ems="10"
+            android:hint="@string/surname"
+            android:textColorHint="?attr/colorOnSurface"
+            android:textColor="?attr/colorOnSurface"
+            android:inputType="textCapSentences|textPersonName|textNoSuggestions"
+            android:padding="16dp"
+            android:text="@={viewModel.inputSurname}"
+            android:textAppearance="@style/TextAppearanceNormal"
+            app:layout_constraintEnd_toEndOf="@+id/et_name"
+            app:layout_constraintStart_toStartOf="@+id/et_name"
+            app:layout_constraintTop_toBottomOf="@+id/et_name" />
+
+        <Button
+            android:id="@+id/btn_create_account"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/create_account"
+            app:layout_constraintEnd_toEndOf="@+id/et_surname"
+            app:layout_constraintStart_toStartOf="@+id/et_surname"
+            app:layout_constraintTop_toBottomOf="@+id/et_surname"
+            android:textColor="@color/colorOnSurface"
+            style="@style/AppTheme.Button" />
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_create_account" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

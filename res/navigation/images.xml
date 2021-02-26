@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/images"
+    app:startDestination="@id/imagesFragment">
+
+    <fragment
+        android:id="@+id/imagesFragment"
+        android:name="com.dronina.cofolder.ui.images.ImagesFragment"
+        android:label="@string/menu_images" >
+        <action
+            android:id="@+id/action_images_to_insideFolder"
+            app:destination="@id/insideFolderFragment"
+            app:enterAnim="@anim/enter_from_top"
+            app:exitAnim="@anim/fragment_fade_exit"
+            app:popEnterAnim="@anim/fragment_fade_enter"
+            app:popExitAnim="@anim/exit_to_top" />
+        <action
+            android:id="@+id/action_images_to_sort"
+            app:destination="@id/sortFragment"
+            app:enterAnim="@anim/enter_from_top"
+            app:exitAnim="@anim/fragment_fade_exit"
+            app:popEnterAnim="@anim/fragment_fade_enter"
+            app:popExitAnim="@anim/exit_to_top" />
+        <action
+            android:id="@+id/action_images_to_bottomSheet"
+            app:destination="@id/bottomSheetFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/insideFolderFragment"
+        android:name="com.dronina.cofolder.ui.insidefolder.InsideFolderFragment"
+        tools:layout="@layout/fragment_inside_folder" >
+        <action
+            android:id="@+id/action_insideFolder_to_imageDetails"
+            app:destination="@id/imageDetailsFragment" />
+        <action
+            android:id="@+id/action_insideFolder_to_share"
+            app:destination="@id/shareFragment"
+            app:enterAnim="@anim/enter_from_top"
+            app:exitAnim="@anim/fragment_fade_exit"
+            app:popEnterAnim="@anim/fragment_fade_enter"
+            app:popExitAnim="@anim/exit_to_top"/>
+    </fragment>
+    <fragment
+        android:id="@+id/shareFragment"
+        android:name="com.dronina.cofolder.ui.share.ShareFragment"
+        android:label="@string/share" >
+        <action
+            android:id="@+id/action_share_to_addContributors"
+            app:destination="@id/addContributorsFragment"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/fragment_fade_exit"
+            app:popEnterAnim="@anim/fragment_fade_enter"
+            app:popExitAnim="@anim/exit_to_right"/>
+        <action
+            android:id="@+id/action_share_to_publicProfile"
+            app:destination="@id/publicProfileFragment"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit"
+            app:popEnterAnim="@anim/fragment_fade_enter"
+            app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/imageDetailsFragment"
+        android:name="com.dronina.cofolder.ui.imagedelails.ImageDetailsFragment"
+        tools:layout="@layout/fragment_image_details" >
+        <action
+            android:id="@+id/action_imageDetails_to_bottomSheetImage"
+            app:destination="@id/bottomSheetImage" />
+    </fragment>
+    <dialog
+        android:id="@+id/bottomSheetImage"
+        android:name="com.dronina.cofolder.ui.imagedelails.ImageDialogFragment" />
+    <fragment
+        android:id="@+id/sortFragment"
+        android:name="com.dronina.cofolder.ui.sort.SortFragment"
+        android:label="@string/sort" />
+    <dialog
+        android:id="@+id/bottomSheetFragment"
+        android:name="com.dronina.cofolder.ui.bottomsheet.BottomSheetFragment">
+        <action
+            android:id="@+id/action_bottomSheet_to_share"
+            app:destination="@id/shareFragment"
+            app:enterAnim="@anim/enter_from_top"
+            app:exitAnim="@anim/fragment_fade_exit"
+            app:popEnterAnim="@anim/fragment_fade_enter"
+            app:popExitAnim="@anim/exit_to_top"/>
+        <action
+            android:id="@+id/action_bottomSheet_to_insideFolder"
+            app:destination="@id/insideFolderFragment"
+            app:enterAnim="@anim/enter_from_top"
+            app:exitAnim="@anim/fragment_fade_exit"
+            app:popEnterAnim="@anim/fragment_fade_enter"
+            app:popExitAnim="@anim/exit_to_top"/>
+    </dialog>
+    <fragment
+        android:id="@+id/addContributorsFragment"
+        android:name="com.dronina.cofolder.ui.addcontributors.AddContributorsFragment"
+        android:label="@string/add_contributor" >
+        <action
+            android:id="@+id/action_addContributors_to_addFriends"
+            app:destination="@id/addFriendsFragment"
+            app:enterAnim="@anim/enter_from_top"
+            app:exitAnim="@anim/fragment_fade_exit"
+            app:popEnterAnim="@anim/fragment_fade_enter"
+            app:popExitAnim="@anim/exit_to_top"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/addFriendsFragment"
+        android:name="com.dronina.cofolder.ui.addfriends.AddFriendsFragment"
+        android:label="@string/add_friends" >
+        <action
+            android:id="@+id/action_addFriends_to_publicProfile"
+            app:destination="@id/publicProfileFragment"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/fragment_fade_exit"
+            app:popEnterAnim="@anim/fragment_fade_enter"
+            app:popExitAnim="@anim/exit_to_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/publicProfileFragment"
+        android:name="com.dronina.cofolder.ui.publicprofile.PublicProfileFragment"
+        android:label="@string/public_profile" />
+</navigation>

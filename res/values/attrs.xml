@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="colorPrimary" format="color" />
+    <attr name="colorPrimaryDark" format="color" />
+    <attr name="colorControlNormal" format="color" />
+    <attr name="colorOnPrimary" format="color" />
+    <attr name="colorSurface" format="color" />
+    <attr name="colorOnSurface" format="color" />
+    <attr name="colorOnBackground" format="color" />
+    <attr name="textColor" format="color" />
+
+    <attr name="colorBottomSheetSurface" format="color" />
+    <attr name="etBg" format="color" />
+    <attr name="etBgLight" format="color" />
+    <attr name="layoutProgressBg" />
+    <attr name="rippleColor" />
+
+
+    <attr name="gray" format="color" />
+    <attr name="brown" format="color" />
+    <attr name="orange" format="color" />
+    <attr name="yellow" format="color" />
+    <attr name="green" format="color" />
+    <attr name="blue" format="color" />
+    <attr name="purple" format="color" />
+    <attr name="pink" format="color" />
+    <attr name="red" format="color" />
+</resources>

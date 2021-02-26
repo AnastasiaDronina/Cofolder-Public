@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.dronina.cofolder.ui.requests.RequestsViewModel" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:layout_marginBottom="?attr/actionBarSize"
+        android:background="?attr/colorPrimary">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:context=".ui.requests.RequestsFragment">
+
+            <Button
+                android:id="@+id/btn_show_sent_to_me"
+                style="@style/Widget.MaterialComponents.Button.TextButton.BlackText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/ic_expand"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:paddingStart="24dp"
+                android:text="@string/sent_to_me"
+                android:textAlignment="viewStart"
+                android:textAppearance="@style/TextAppearanceSmallTitle" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_to_me"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <TextView
+                android:id="@+id/tv_no_requests_to_me"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="24dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:text="@string/no_requests_to_me"
+                android:textAppearance="@style/TextAppearanceTextButton"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/btn_show_sent_by_me"
+                style="@style/Widget.MaterialComponents.Button.TextButton.BlackText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/ic_expand"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:paddingStart="24dp"
+                android:text="@string/sent_by_me"
+                android:textAlignment="viewStart"
+                android:textAppearance="@style/TextAppearanceSmallTitle" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_by_me"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <TextView
+                android:id="@+id/tv_no_requests_by_me"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="24dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:text="@string/no_requests_by_me"
+                android:textAppearance="@style/TextAppearanceTextButton"
+                android:visibility="gone" />
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</layout>

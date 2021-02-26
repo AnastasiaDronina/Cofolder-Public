@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.dronina.cofolder.ui.sort.SortViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_marginTop="?attr/actionBarSize"
+        android:layout_marginBottom="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".ui.sort.SortFragment">
+
+
+        <RadioGroup
+            android:id="@+id/rg_sort_methods"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp">
+
+            <RadioButton
+                android:id="@+id/rb_by_default"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="8dp"
+                android:text="@string/by_default"
+                android:textAppearance="@style/TextAppearanceTextButton"
+                android:textColor="?attr/colorOnSurface" />
+
+            <RadioButton
+                android:id="@+id/rb_by_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="8dp"
+                android:text="@string/by_date"
+                android:textAppearance="@style/TextAppearanceTextButton"
+                android:textColor="?attr/colorOnSurface" />
+
+            <RadioButton
+                android:id="@+id/rb_by_color"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="8dp"
+                android:text="@string/by_color"
+                android:textAppearance="@style/TextAppearanceTextButton"
+                android:textColor="?attr/colorOnSurface" />
+
+            <RadioButton
+                android:id="@+id/rb_alphabetically"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="8dp"
+                android:text="@string/alphabetically"
+                android:textAppearance="@style/TextAppearanceTextButton"
+                android:textColor="?attr/colorOnSurface" />
+        </RadioGroup>
+
+        <CheckBox
+            android:id="@+id/cb_show_only_private"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginRight="16dp"
+            android:paddingLeft="8dp"
+            android:text="@string/show_only_private"
+            android:textAppearance="@style/TextAppearanceTextButton"
+            android:textColor="?attr/colorOnSurface" />
+    </LinearLayout>
+</layout>

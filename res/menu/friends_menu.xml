@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_search_friend"
+        android:icon="@drawable/ic_search"
+        app:actionViewClass="androidx.appcompat.widget.SearchView"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_requests"
+        android:icon="@drawable/ic_notifications"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_add_friends"
+        android:icon="@drawable/ic_add_friends"
+        app:showAsAction="always" />
+
+
+</menu>

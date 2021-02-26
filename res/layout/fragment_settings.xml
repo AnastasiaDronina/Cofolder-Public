@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.dronina.cofolder.ui.settings.SettingsViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_marginTop="?attr/actionBarSize"
+        android:layout_marginBottom="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="?attr/colorPrimary"
+        tools:context=".ui.settings.SettingsFragment">
+
+        <Button
+            android:id="@+id/btn_theme"
+            style="@style/Widget.MaterialComponents.Button.TextButton.BlackText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_theme"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:minHeight="0dp"
+            android:paddingLeft="16dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:text="@string/theme"
+            android:textAlignment="viewStart"
+            android:textAppearance="@style/TextAppearanceTextButton"
+            app:cornerRadius="0dp"
+            app:iconPadding="8dp" />
+
+        <Button
+            android:id="@+id/btn_language"
+            style="@style/Widget.MaterialComponents.Button.TextButton.BlackText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_language"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:minHeight="0dp"
+            android:paddingLeft="16dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:text="@string/language"
+            android:textAlignment="viewStart"
+            android:textAppearance="@style/TextAppearanceTextButton"
+            app:cornerRadius="0dp"
+            app:iconPadding="8dp" />
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/switch_notifications"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_notifications"
+            android:drawablePadding="8dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:minHeight="0dp"
+            android:paddingLeft="16dp"
+            android:paddingTop="16dp"
+            android:paddingRight="16dp"
+            android:paddingBottom="16dp"
+            android:text="@string/allow_notifications"
+            android:textColor="?attr/colorOnSurface"
+            android:textAppearance="@style/TextAppearanceTextButton"
+            android:textAlignment="viewStart"
+            app:cornerRadius="0dp" />
+
+    </LinearLayout>
+</layout>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/popup_menu_bg"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/btn_share"
+        style="@style/Widget.MaterialComponents.Button.TextButton.BlackText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_share"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:paddingRight="64dp"
+        android:text="@string/share"
+        android:textAppearance="@android:style/TextAppearance.Material.Widget.Toolbar.Subtitle"
+        app:cornerRadius="16dp"
+        app:iconPadding="8dp" />
+
+    <Button
+        android:id="@+id/btn_leave_or_delete"
+        style="@style/Widget.MaterialComponents.Button.TextButton.BlackText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_leave"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:paddingRight="64dp"
+        android:text="@string/leave"
+        android:textAppearance="@android:style/TextAppearance.Material.Widget.Toolbar.Subtitle"
+        app:cornerRadius="16dp"
+        app:iconPadding="8dp" />
+
+</LinearLayout>

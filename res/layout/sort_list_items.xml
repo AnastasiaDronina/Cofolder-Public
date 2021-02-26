@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rg_sort_methods"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp">
+
+    <RadioButton
+        android:id="@+id/rb_by_default"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="8dp"
+        android:text="@string/by_default"
+        android:textAppearance="@style/TextAppearanceNormal"
+        android:textColor="?attr/colorOnSurface" />
+
+    <RadioButton
+        android:id="@+id/rb_checked_first"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="8dp"
+        android:text="@string/checked_first"
+        android:textAppearance="@style/TextAppearanceNormal"
+        android:textColor="?attr/colorOnSurface" />
+
+    <RadioButton
+        android:id="@+id/rb_unchecked_first"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="8dp"
+        android:text="@string/rb_unchecked_first"
+        android:textAppearance="@style/TextAppearanceNormal"
+        android:textColor="?attr/colorOnSurface" />
+
+    <RadioButton
+        android:id="@+id/rb_alphabetically"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="8dp"
+        android:text="@string/alphabetically"
+        android:textAppearance="@style/TextAppearanceNormal"
+        android:textColor="?attr/colorOnSurface" />
+</RadioGroup>

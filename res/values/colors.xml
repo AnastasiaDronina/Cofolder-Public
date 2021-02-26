@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="background">#f7f7f7</color>
+    <color name="colorPrimary">#f7f7f7</color>
+    <color name="nightColorPrimary">#1b1b1b</color>
+    <color name="colorPrimaryDark">#ededed</color>
+    <color name="nightColorPrimaryDark">#2d2d2d</color>
+    <color name="colorOnPrimary">#000000</color>
+    <color name="nightOnPrimary">#f7f7f7</color>
+    <color name="colorSecondary">#ffd95b</color>
+    <color name="colorSecondaryVariant">#ffc000</color>
+    <color name="colorOnSecondary">#000000</color>
+    <color name="colorError">#f44336</color>
+    <color name="colorOnError">#ffffff</color>
+    <color name="colorSurface">#ffffff</color>
+    <color name="nightColorSurface">#2d2d2d</color>
+    <color name="colorOnSurface">#000000</color>
+    <color name="nightOnSurface">#f7f7f7</color>
+
+    <!-- colors for items -->
+    <color name="gray">#cfd8dc</color>
+    <color name="brown">#d7ccc8</color>
+    <color name="orange">#ffccbc</color>
+    <color name="yellow">#ffe0b2</color>
+    <color name="green">#c8e6c9</color>
+    <color name="blue">#bbdefb</color>
+    <color name="purple">#e1bee7</color>
+    <color name="pink">#f8bbd0</color>
+    <color name="red">#ef9a9a</color>
+</resources>
